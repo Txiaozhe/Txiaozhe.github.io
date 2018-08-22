@@ -9,5 +9,16 @@
     "tags": "Github,diary",
     "abstract": "记一次GitHub的惊险历程",
     "path": "home"
+  },
+  {
+    "id": 3,
+    "title": "更改Bash版本引发的Mac事故",
+    "category": "home",
+    "contentid": "bash-mac-error",
+    "created": "2018-08-22 08:54:04",
+    "star": 1,
+    "tags": "Mac,Bash",
+    "abstract": "更改Bash版本引发的Mac事故",
+    "path": "home"
   }
 ]
