@@ -1,4 +1,4 @@
-之前参与了CockroachDB的文档翻译，总觉得不够，希望能参与到项目的开发中。于是查看各种文档，开发指南。幸好CockroachDB 官方有完整的[开发指导](https://github.com/cockroachdb/cockroach/blob/master/CONTRIBUTING.md)，于是我就按照开发指引来进行环境的搭建，我使用的电脑是2017款MacBook Pro，OSX 10.13.3，8Gb，Core i5。
+之前参与了CockroachDB的文档翻译，总觉得不够，希望能参与到项目的开发中。于是查看各种文档，开发指南。幸好CockroachDB 官方有完整的[开发指导](https://github.com/cockroachdb/cockroach/blob/master/CONTRIBUTING.md)，于是我就按照开发指引来进行环境的搭建，使用的电脑是2017款MacBook Pro，OSX 10.13.3，8Gb，Core i5。
 
 项目开发对环境有很多要求，比如C++需要支持11版本，Go版本需要1.9+等等，其中还有一条要求，Bash的版本需要在 4+，我们都知道，mac默认的bash是3.2版本的，因此需要进行升级。升级的方法是网上查的，使用brew  进行安装：
 
@@ -49,7 +49,7 @@ $ sudo mv /bin/bash.origin /bin/bash
 $ sudo unlink /bin/bash
 ```
 
-再次重启，进入复活了，系统完好无损，简直惊险。
+再次重启，竟然复活了，系统完好无损，简直惊险。
 
 到这里，以为bash就这样无法升级了，那也就跟CockroachDB开发无缘了，不过当我在Termina中输入：
 
