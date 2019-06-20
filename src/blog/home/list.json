@@ -1,6 +1,17 @@
 [
   {
     "id": 1,
+    "title": "记Rokid两周以及一次ShadowNode MQTT的bug",
+    "category": "home",
+    "contentid": "mqtt-hotfix",
+    "created": "2019-06-20 11:16:23",
+    "star": 1,
+    "tags": "Rokid,job,bug",
+    "abstract": "记Rokid两周以及一次ShadowNode MQTT的bug",
+    "path": "home"
+  },
+  {
+    "id": 1,
     "title": "给2019起个好头",
     "category": "home",
     "contentid": "2019-begin",
