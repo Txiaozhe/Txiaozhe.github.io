@@ -218,45 +218,45 @@
 <p>在Kubernetes这样的编排系统中运行像CockroachDB这样的数据库，另一个更明显的问题是如何找出每一个副本的数据存在的位置。不同的存储方式，其相应解决方案的成熟度不同。Kubernetes很早就对<a href="http://kubernetes.io/docs/stable/user-guide/persistent-volumes/" target="_blank" rel="noopener">‘PersistentVolumes’</a>有了很好的支持，也就是可以挂载在Kubernetes任意节点上的远程磁盘。这是一种很好的策略因为它允许一个副本在不丢失任何数据的情况下迁移。然而，正因为这些数据是远程的（且常常在后台被复制，比如EC2上的EBS卷和Google Compute Engine上的持久卷），这意味着相比于使用本地磁盘，这种方式存在明显的延迟开销。</p>
 <p>像CockroachDB这样一个云生和集群化的数据库来说，偶尔出现单台机器上的数据丢失的情况，一点问题都没有，因为它能探测到机器上数据副本不足，从而相应添加副本。正因如此，理想情况下为每个副本使用本地磁盘可以降低延迟。然而，由于一些原因（<a href="https://github.com/kubernetes/kubernetes/pull/30044" target="_blank" rel="noopener">这些问题</a>已经在1.6release版本中经过了严肃的讨论），Kubernetes目前还不支持StatefulSets使用本地磁盘。在此期间，远程持久卷已经能满足我们的需求。</p>
 <h2 id="实现细节：在Kubernetes中运行CockroachDB">实现细节：在Kubernetes中运行CockroachDB<a class="post-anchor" href="#实现细节：在Kubernetes中运行CockroachDB"></a></h2><h3 id="创建一个Kubernetes集群">创建一个Kubernetes集群<a class="post-anchor" href="#创建一个Kubernetes集群"></a></h3><p><a href="http://kubernetes.io/docs/stable/getting-started-guides/" target="_blank" rel="noopener">创建一个Kubernetes集群有<strong>很多种</strong>不同的</a>方式。为了简单起见我们将使用Container Engine，这在其他环境下也是可行的。例如，参照<a href="https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-kubernetes.html" target="_blank" rel="noopener">我们的文档有关如果在本地Minikube中运行</a>或参照<a href="http://kubernetes.io/docs/stable/getting-started-guides/kops/" target="_blank" rel="noopener">Kubernetes 的文档在AWS中创建集群</a>。如果你安装了<a href="https://cloud.google.com/sdk/gcloud/" target="_blank" rel="noopener">gcloud</a>，你可以通过运行以下命令来创建集群：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> gcloud container clusters create cockroachdb-cluster</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> gcloud container clusters create cockroachdb-cluster</span><br></code></pre></td></tr></table></figure>
 
 <h3 id="快速启动CockroachDB">快速启动CockroachDB<a class="post-anchor" href="#快速启动CockroachDB"></a></h3><p>Kubernetes的配置使用YAML配置文件进行管理，CockroachDB的配置也不例外。我们可以使用以下配置创建一个集群，其中的注释解释了我们的操作。首先，<a href="https://github.com/cockroachdb/cockroach/blob/master/cloud/kubernetes/cockroachdb-statefulset.yaml" target="_blank" rel="noopener">从我们的Github 仓库中</a>复制名叫<code>cockroachdb-statefulset.yaml</code>的配置文件。这个文件定义了将被创建的Kubernetes资源，包括快速启动CockroachDB 容器的StatefulSet对象并将其连接至持久卷。</p>
 <p>然后，创建这些资源，如下（如果你使用Minikube，你可能首先需要<a href="https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-kubernetes.html#step-2-start-the-cockroachdb-cluster" target="_blank" rel="noopener">手动配置持久卷</a>）。稍后，你将看到在集群中运行的3个副本和一些服务。刚开始，因为副本还没有全部启动，可能只显示一部分的副本。这是正常的，因为StatefulSets会从第一个开始逐个创建副本：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> kubectl create -f cockroachdb-statefulset.yaml</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> kubectl create -f cockroachdb-statefulset.yaml</span><br></code></pre></td></tr></table></figure>
 
 <p>service “cockroachdb-public” created<br>service “cockroachdb” created<br>poddisruptionbudget “cockroachdb-budget” created<br>statefulset “cockroachdb” created</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">$ kubectl get services<br></code></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">$ kubectl get services<br></code></pre></td></tr></table></figure>
 
 <p>cockroachdb          None         <none>        26257/TCP,8080/TCP   4s<br>cockroachdb-public   10.0.0.85    <none>        26257/TCP,8080/TCP   4s<br>kubernetes           10.0.0.1     <none>        443/TCP              1h</none></none></none></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> kubectl get pods</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> kubectl get pods</span><br></code></pre></td></tr></table></figure>
 
 <p>NAME            READY     STATUS    RESTARTS   AGE<br>cockroachdb-0   1/1       Running   0          29s<br>cockroachdb-1   0/1       Running   0          9s</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> kubectl get pods</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> kubectl get pods</span><br></code></pre></td></tr></table></figure>
 
 <p>NAME            READY     STATUS    RESTARTS   AGE<br>cockroachdb-0   1/1       Running   0          1m<br>cockroachdb-1   1/1       Running   0          41s<br>cockroachdb-2   1/1       Running   0          21s</p>
 <p>如果你想看看这个过程中发生了什么，你可以运行<code>kubectl logs cockroachdb-0</code>查看其中一个pod的日志。</p>
 <h3 id="使用CockroachDB集群">使用CockroachDB集群<a class="post-anchor" href="#使用CockroachDB集群"></a></h3><p>一旦你的集群开始运行了，你一定会想去尝试它。通过Kubernetes打开一个SQL shell，你可以运行一个一次性的pod，并使用<code>cockroachdb-public</code>作为hostname来访问CockroachDB集群。Kubernetes将会自动均衡地将连接分配至健康的CockroachDB实例。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">$ kubectl run cockroachdb -it --image&#x3D;cockroachdb&#x2F;cockroach --rm --restart&#x3D;Never -- sql --insecure --host&#x3D;cockroachdb-public<br></code></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">$ kubectl run cockroachdb -it --image&#x3D;cockroachdb&#x2F;cockroach --rm --restart&#x3D;Never -- sql --insecure --host&#x3D;cockroachdb-public<br></code></pre></td></tr></table></figure>
 
 <p>等待cockroachdb运行成功，此时状态为Pending，pod ready状态为 false</p>
 <p>输入如下命令：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">root@cockroachdb-public:26257&gt; CREATE DATABASE bank;<br>CREATE DATABASE<br>root@cockroachdb-public:26257&gt; CREATE TABLE bank.accounts (id INT PRIMARY KEY, balance DECIMAL);<br>CREATE TABLE<br>root@cockroachdb-public:26257&gt; INSERT INTO bank.accounts VALUES (1234, 10000.50);<br>INSERT 1<br>root@cockroachdb-public:26257&gt; SELECT * FROM bank.accounts;<br>+------+-------------+<br>| id | balance |<br>+------+-------------+<br>| 1234 | 10000.5 |<br>+------+----------+<br>(1 row)<br></code></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs shell">root@cockroachdb-public:26257&gt; CREATE DATABASE bank;<br>CREATE DATABASE<br>root@cockroachdb-public:26257&gt; CREATE TABLE bank.accounts (id INT PRIMARY KEY, balance DECIMAL);<br>CREATE TABLE<br>root@cockroachdb-public:26257&gt; INSERT INTO bank.accounts VALUES (1234, 10000.50);<br>INSERT 1<br>root@cockroachdb-public:26257&gt; SELECT * FROM bank.accounts;<br>+------+-------------+<br>| id | balance |<br>+------+-------------+<br>| 1234 | 10000.5 |<br>+------+----------+<br>(1 row)<br></code></pre></td></tr></table></figure>
 
 <h3 id="查看管理页面">查看管理页面<a class="post-anchor" href="#查看管理页面"></a></h3><p>如果你想查看集群的行为信息，你可以通过将你本地机器的端口映射到其中一个pods拉取CockroachDB管理UI：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> kubectl port-forward cockroachdb-0 8080</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> kubectl port-forward cockroachdb-0 8080</span><br></code></pre></td></tr></table></figure>
 
 <p>运行了这个命令，你就可以在浏览器中输入<a href="http://localhost:8080/" target="_blank" rel="noopener">http://localhost:8080/</a>来访问管理UI了。</p>
 <p><a href="https://www.cockroachlabs.com/uploads/2016/10/Screen-Shot-2016-10-06-at-1.24.09-PM-1.png" target="_blank" rel="noopener"><a href="https://www.cockroachlabs.com/uploads/2016/10/Screen-Shot-2016-10-06-at-1.24.09-PM-1-1024x548.png" target="_blank" rel="noopener" data-caption="monitor deployment of CockroachDB on Kubernetes from the admin UI" data-fancybox="images"><img src="https://www.cockroachlabs.com/uploads/2016/10/Screen-Shot-2016-10-06-at-1.24.09-PM-1-1024x548.png" alt="monitor deployment of CockroachDB on Kubernetes from the admin UI"></a></a></p>
 <h3 id="模拟节点故障">模拟节点故障<a class="post-anchor" href="#模拟节点故障"></a></h3><p>如果你想测试集群的弹性，你可以尝试在通过SQL shell访问集群的同时，新起一个终端运行类似于<code>kubectl delete pod cockroachdb-3</code>的命令来杀掉一些容器。如果你碰巧删除了你的shell正在操作的实例，你可能偶尔会遇到 <strong>bad connection</strong> 的错误，但是重试查询操作依然会生效。这些被杀掉的容器将会通过StatefulSet 管理器被重新创建，就像机器在生产环境中宕机一样。</p>
 <p>如果你想测试集群中数据的持久性，你也可以尝试一次性删除所有的pod并确保当它们恢复时能正确地从各自的持久化卷中启动。要实现这一点，可以通过运行<code>kubectl delete pod –selector app=cockroachdb</code>以删除所有标签为<code>app=cockroachdb</code>的pod，其中包括来自我们StatefulSet中的pod。所有的pod恢复的过程会花费一点时间（就像创建它们的时候一样），但是一旦它们重启并再次运行，你运行SQL语句时就应该得到相同的结果。</p>
 <h3 id="缩放CockroachDB集群">缩放CockroachDB集群<a class="post-anchor" href="#缩放CockroachDB集群"></a></h3><p>Kubernetes使得按需缩放集群变得简单。如果你想为集群添加新的副本，你需要做的就是调整StatefulSet，如下所示：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> kubectl scale statefulset cockroachdb --replicas=4</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> kubectl scale statefulset cockroachdb --replicas=4</span><br></code></pre></td></tr></table></figure>
 
 <h3 id="关闭CockroachDB集群">关闭CockroachDB集群<a class="post-anchor" href="#关闭CockroachDB集群"></a></h3><p>如果你想清理所有我们创建的资源，可以通过一条命令，这要归功于我们为所有资源添加的<a href="http://kubernetes.io/docs/stable/user-guide/labels/" target="_blank" rel="noopener">labels</a>:</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> kubectl delete    statefulsets,pods,persistentvolumes,persistentvolumeclaims,services,poddisruptionbudget -l app=cockroachdb</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> kubectl delete    statefulsets,pods,persistentvolumes,persistentvolumeclaims,services,poddisruptionbudget -l app=cockroachdb</span><br></code></pre></td></tr></table></figure>
 
 <p>或者，你也可以关闭整个Kubernetes集群：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> gcloud container clusters delete cockroachdb-cluster</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> gcloud container clusters delete cockroachdb-cluster</span><br></code></pre></td></tr></table></figure>
 
 <p>鉴于目前CockroachDB尚未成熟地产品化，我们现在不建议将此设置应用到关键任务的数据中，但是，但是你仍然可以在机器上做很多事，比如：</p>
 <ul>
@@ -318,7 +318,7 @@
       永久链接：<a href="https://txiaozhe.github.io/2018/06/10/run-cockroachdb-in-kubernetes/">https://txiaozhe.github.io/2018/06/10/run-cockroachdb-in-kubernetes/</a>
     </div>
     <div class="declare">
-      版权声明：本文首发于<a href="https://txiaozhe.github.io">Jim Tang</a>的博客，转载请注明出处！
+      版权声明：本文首发于 <a href="https://txiaozhe.github.io">Jim Tang</a> 的博客，转载请注明出处！
     </div>
   </div>
 

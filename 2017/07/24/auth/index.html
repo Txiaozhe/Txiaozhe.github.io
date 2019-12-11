@@ -233,7 +233,7 @@
 <ul>
 <li><strong>载荷(Payload)：</strong></li>
 </ul>
-<figure class="highlight json"><table><tr><td class="code"><pre><code class="hljs json">&#123;<br>  <span class="hljs-attr">"iss"</span>: <span class="hljs-string">"Online JWT Builder"</span>, <br>  <span class="hljs-attr">"iat"</span>: <span class="hljs-number">1416797419</span>,<br>  <span class="hljs-attr">"exp"</span>: <span class="hljs-number">1448333419</span>,<br>  <span class="hljs-attr">"aud"</span>: <span class="hljs-string">"www.example.com"</span>,<br>  <span class="hljs-attr">"sub"</span>: <span class="hljs-string">"jrocket@example.com"</span>,<br>  <span class="hljs-attr">"GivenName"</span>: <span class="hljs-string">"Johnny"</span>,<br>  <span class="hljs-attr">"Surname"</span>: <span class="hljs-string">"Rocket"</span>,<br>  <span class="hljs-attr">"Email"</span>: <span class="hljs-string">"jrocket@example.com"</span>,<br>  <span class="hljs-attr">"Role"</span>: [ <span class="hljs-string">"Manager"</span>, <span class="hljs-string">"Project Administrator"</span> ]<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs json">&#123;<br>  <span class="hljs-attr">"iss"</span>: <span class="hljs-string">"Online JWT Builder"</span>, <br>  <span class="hljs-attr">"iat"</span>: <span class="hljs-number">1416797419</span>,<br>  <span class="hljs-attr">"exp"</span>: <span class="hljs-number">1448333419</span>,<br>  <span class="hljs-attr">"aud"</span>: <span class="hljs-string">"www.example.com"</span>,<br>  <span class="hljs-attr">"sub"</span>: <span class="hljs-string">"jrocket@example.com"</span>,<br>  <span class="hljs-attr">"GivenName"</span>: <span class="hljs-string">"Johnny"</span>,<br>  <span class="hljs-attr">"Surname"</span>: <span class="hljs-string">"Rocket"</span>,<br>  <span class="hljs-attr">"Email"</span>: <span class="hljs-string">"jrocket@example.com"</span>,<br>  <span class="hljs-attr">"Role"</span>: [ <span class="hljs-string">"Manager"</span>, <span class="hljs-string">"Project Administrator"</span> ]<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li><ul>
@@ -258,7 +258,7 @@
 </li>
 </ul>
 <p>将上面的json进行base64编码得到一下字符串，称为Payload：</p>
-<figure class="highlight"><table><tr><td class="code"><pre><code class="hljs json">eyJpc3MiOiJKb2huIFd1IEpXVCIsImlhdCI6MTQ0MTU5MzUwMiwiZXhwIjoxNDQxNTk0NzIyLCJhdWQiOiJ3d3cuZXhhbXBsZS5jb20iLCJzdWIiOiJqcm9ja2V0QGV4YW1wbGUuY29tIiwiZnJvbV91c2VyIjoiQiIsInRhcmdldF91c2VyIjoiQSJ9<br></code></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs json">eyJpc3MiOiJKb2huIFd1IEpXVCIsImlhdCI6MTQ0MTU5MzUwMiwiZXhwIjoxNDQxNTk0NzIyLCJhdWQiOiJ3d3cuZXhhbXBsZS5jb20iLCJzdWIiOiJqcm9ja2V0QGV4YW1wbGUuY29tIiwiZnJvbV91c2VyIjoiQiIsInRhcmdldF91c2VyIjoiQSJ9<br></code></pre></td></tr></table></figure>
 
 <blockquote>
 <p>Base64是一种基于64个可打印字符来表示二进制数据的表示方法。由于2的6次方等于64，所以每6个比特为一个单元，对应某个可打印字符。三个字节有24个比特，对应于4个Base64单元，即3个字节需要用4个可打印字符来表示</p>
@@ -266,7 +266,7 @@
 <ul>
 <li><strong>头部(Header)：</strong>描述该jwt最基本的信息</li>
 </ul>
-<figure class="highlight json"><table><tr><td class="code"><pre><code class="hljs json">&#123;<br>	<span class="hljs-attr">"typ"</span>: <span class="hljs-string">"JWT"</span>,<br>	<span class="hljs-attr">"alg"</span>: <span class="hljs-string">"HS256"</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs json">&#123;<br>	<span class="hljs-attr">"typ"</span>: <span class="hljs-string">"JWT"</span>,<br>	<span class="hljs-attr">"alg"</span>: <span class="hljs-string">"HS256"</span><br>&#125;<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li><ul>
@@ -285,19 +285,19 @@
 </li>
 </ul>
 <p>将该头部也进行base64转换，得到如下字符串：</p>
-<figure class="highlight"><table><tr><td class="code"><pre><code class="hljs json">eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9<br></code></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs json">eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li><strong>签名（Signature）：</strong></li>
 </ul>
 <p>将上面的两个编码后的字符串都用句号.连接在一起（Header在前），就形成了:</p>
-<figure class="highlight"><table><tr><td class="code"><pre><code class="hljs json">eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJKb2huIFd1IEpXVCIsImlhdCI6MTQ0MTU5MzUwMiwiZXhwIjoxNDQxNTk0NzIyLCJhdWQiOiJ3d3cuZXhhbXBsZS5jb20iLCJzdWIiOiJqcm9ja2V0QGV4YW1wbGUuY29tIiwiZnJvbV91c2VyIjoiQiIsInRhcmdldF91c2VyIjoiQSJ9<br></code></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs json">eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJKb2huIFd1IEpXVCIsImlhdCI6MTQ0MTU5MzUwMiwiZXhwIjoxNDQxNTk0NzIyLCJhdWQiOiJ3d3cuZXhhbXBsZS5jb20iLCJzdWIiOiJqcm9ja2V0QGV4YW1wbGUuY29tIiwiZnJvbV91c2VyIjoiQiIsInRhcmdldF91c2VyIjoiQSJ9<br></code></pre></td></tr></table></figure>
 
 <p>最后，将上面拼接完的字符串用HS256算法进行加密。在加密的时候，我们还需要提供一个密钥（secret）。比如用mystar作为密钥，加密后的内容:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">rSWamyAYwuHCo7IFAgd1oRpSP7nzL7BF5t7ItqpKViM<br></code></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">rSWamyAYwuHCo7IFAgd1oRpSP7nzL7BF5t7ItqpKViM<br></code></pre></td></tr></table></figure>
 
 <p>最终的Token：</p>
-<figure class="highlight"><table><tr><td class="code"><pre><code class="hljs json">eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJKb2huIFd1IEpXVCIsImlhdCI6MTQ0MTU5MzUwMiwiZXhwIjoxNDQxNTk0NzIyLCJhdWQiOiJ3d3cuZXhhbXBsZS5jb20iLCJzdWIiOiJqcm9ja2V0QGV4YW1wbGUuY29tIiwiZnJvbV91c2VyIjoiQiIsInRhcmdldF91c2VyIjoiQSJ9.rSWamyAYwuHCo7IFAgd1oRpSP7nzL7BF5t7ItqpKViM<br></code></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs json">eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJKb2huIFd1IEpXVCIsImlhdCI6MTQ0MTU5MzUwMiwiZXhwIjoxNDQxNTk0NzIyLCJhdWQiOiJ3d3cuZXhhbXBsZS5jb20iLCJzdWIiOiJqcm9ja2V0QGV4YW1wbGUuY29tIiwiZnJvbV91c2VyIjoiQiIsInRhcmdldF91c2VyIjoiQSJ9.rSWamyAYwuHCo7IFAgd1oRpSP7nzL7BF5t7ItqpKViM<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li><strong>Token认证过程：</strong></li>
@@ -386,7 +386,7 @@
       永久链接：<a href="https://txiaozhe.github.io/2017/07/24/auth/">https://txiaozhe.github.io/2017/07/24/auth/</a>
     </div>
     <div class="declare">
-      版权声明：本文首发于<a href="https://txiaozhe.github.io">Jim Tang</a>的博客，转载请注明出处！
+      版权声明：本文首发于 <a href="https://txiaozhe.github.io">Jim Tang</a> 的博客，转载请注明出处！
     </div>
   </div>
 

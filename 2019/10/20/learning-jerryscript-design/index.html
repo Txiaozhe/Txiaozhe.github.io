@@ -265,19 +265,19 @@
 <li><strong>small</strong>：最多可以编码511个字面量</li>
 </ul>
 <p>单字节编码  0 - 254 之间的字面量</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">byte[0] &#x3D; literal_index<br></code></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">byte[0] &#x3D; literal_index<br></code></pre></td></tr></table></figure>
 
 <p>双字节编码 255 - 510 之间的字面量</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">byte[0] &#x3D; 0xff<br>byte[1] &#x3D; literal_index - 0xff<br></code></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plain">byte[0] &#x3D; 0xff<br>byte[1] &#x3D; literal_index - 0xff<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li><strong>full</strong>：最多可以编码 32767 个字面量</li>
 </ul>
 <p>单字节编码  0 - 127 之间的字面量</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">byte[0] &#x3D; literal_index<br></code></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">byte[0] &#x3D; literal_index<br></code></pre></td></tr></table></figure>
 
 <p>双字节编码 128 - 32767 之间的字面量</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">byte[0] &#x3D; (literal_index &gt;&gt; 8) | 0x80<br>byte[1] &#x3D; (literal_index &amp; 0xff)<br></code></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plain">byte[0] &#x3D; (literal_index &gt;&gt; 8) | 0x80<br>byte[1] &#x3D; (literal_index &amp; 0xff)<br></code></pre></td></tr></table></figure>
 
 <p>因为大多数函数需要的字面量小于 255，所以 small 编码为所有字面量提供了一个单字节的字面量索引。与 full 编码相比，small 编码占用更少的空间但是范围有限。</p>
 <h3 id="Literal-Store">Literal Store<a class="post-anchor" href="#Literal-Store"></a></h3><p>JerryScript 没有用于字面量的全局字符串表，但是将它们存储在文字存储中。 在解析阶段，如果出现一个新的字面量，若其标识符与现有的标识符相同，则不会再次存储该字符串，但会使用字面量存储区中的标识符。 如果一个新的字面量不在Literal Store中，它将被插入。</p>
@@ -399,7 +399,7 @@
       永久链接：<a href="https://txiaozhe.github.io/2019/10/20/learning-jerryscript-design/">https://txiaozhe.github.io/2019/10/20/learning-jerryscript-design/</a>
     </div>
     <div class="declare">
-      版权声明：本文首发于<a href="https://txiaozhe.github.io">Jim Tang</a>的博客，转载请注明出处！
+      版权声明：本文首发于 <a href="https://txiaozhe.github.io">Jim Tang</a> 的博客，转载请注明出处！
     </div>
   </div>
 
