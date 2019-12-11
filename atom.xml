@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>Jim Tang&#39;s blog</title>
   <icon>https://txiaozhe.github.io/icon.png</icon>
   
   <link href="/atom.xml" rel="self"/>
@@ -74,13 +74,13 @@
     <link href="https://txiaozhe.github.io/2019/11/18/learning-jerryscript-design/"/>
     <id>https://txiaozhe.github.io/2019/11/18/learning-jerryscript-design/</id>
     <published>2019-11-18T14:12:09.000Z</published>
-    <updated>2019-12-11T14:34:20.524Z</updated>
+    <updated>2019-12-11T14:38:53.535Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;简介&quot;&gt;简介&lt;a class=&quot;post-anchor&quot; href=&quot;#简介&quot;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;这是 JerryScript 官网的一段简介：&lt;br&gt;&lt;a href=&quot;/blogs/nodejs/jerryscript-introduce.png&quot; dat
+        &lt;p&gt;这是 JerryScript 官网的一段简介：&lt;br&gt;&lt;a href=&quot;/images/jerryscript-introduce.png&quot; data-caption data-fancybox=&quot;images&quot;&gt;&lt;img src=&quot;/images/jerryscript-
       
     
     </summary>
