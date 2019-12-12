@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://txiaozhe.github.io/"/>
-  <updated>2019-12-11T13:59:45.378Z</updated>
+  <updated>2019-12-12T12:49:51.010Z</updated>
   <id>https://txiaozhe.github.io/</id>
   
   <author>
@@ -21,14 +21,11 @@
     <link href="https://txiaozhe.github.io/2019/12/13/javascript-in-iot/"/>
     <id>https://txiaozhe.github.io/2019/12/13/javascript-in-iot/</id>
     <published>2019-12-13T05:23:03.000Z</published>
-    <updated>2019-12-11T13:59:45.378Z</updated>
+    <updated>2019-12-12T12:49:51.010Z</updated>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;今天分享的内容是 “JavaScript in IoT”，在低端设备上运行 JavaScript，这与我上一段工作经历有关，之前我在一家做语音交互和 IoT 的公司，负责 IoT 设备端服务的基础架构，简单来说就是运行在 IoT 设备上的一个服务，与 IoT 云端交互用的。
-      
+      &lt;!-- &gt; 壹向技术分享：在低端设备上运行 JavaScript --&gt;
     
     </summary>
     
