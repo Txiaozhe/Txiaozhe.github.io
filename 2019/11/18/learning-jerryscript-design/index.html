@@ -182,6 +182,10 @@
                   <a href="/categories/Tech">Tech</a>
                 
               
+                
+                  <a href="/categories/Translate">Translate</a>
+                
+              
           </span>
         </span>
         
@@ -216,7 +220,7 @@
 </ul>
 <p>该引擎支持在设备上解释、执行 JavaScript 以及对外围设备的访问。</p>
 </blockquote>
-<p>说白了 JerryScript 和我们日常用的 Chrome 和 Node.js 中的 V8 是一回事，是一个引擎，只不过 JerryScript 能运行在更加低端的设备上，如嵌入式设备。我们知道，JavaScript 作为一个脚本语言有其先天的缺陷，如解释执行的效率低下以及臃肿的堆内存的占用，哪怕 V8 的设计与实现已经做了大量的优化与改进，但距离能运行在 RAM 以 MB 为单位的设备上还差得很远。这不禁使人产生疑问，同样是对统一标准的实现，JerryScript 凭什么做到运行在 RAM 低于 64KB，ROM 低于 200KB 的设备上这种骚操作。本文参考了 <a href="https://jerryscript.net/internals/" target="_blank" rel="noopener">JerryScript 的官方文档</a>并对 JerryScript 设计原理进行简单的阐述。</p>
+<p>说白了 JerryScript 和我们日常用的 Chrome 和 Node.js 中的 V8 是一回事，是一个引擎，只不过  JerryScript 能运行在更加低端的设备上，如嵌入式设备。我们知道，JavaScript 作为一个脚本语言有其先天的缺陷，如解释执行的效率低下以及臃肿的堆内存的占用，哪怕 V8 的设计与实现已经做了大量的优化与改进，但距离能运行在 RAM 以 KB 为单位的设备上还差得很远。这不禁使人产生疑问，同样是对统一标准的实现，JerryScript 凭什么做到运行在 RAM 低于 64KB，ROM 低于 200KB 的设备上这种骚操作。本文是对 <a href="https://jerryscript.net/internals/" target="_blank" rel="noopener">JerryScript 的官方文档</a> 的翻译。</p>
 <p><a href="https://jerryscript.net/img/engines_high_level_design.png" target="_blank" rel="noopener" data-caption data-fancybox="images"><img src="https://jerryscript.net/img/engines_high_level_design.png" alt></a></p>
 <p>如上图，Parser(解析器) 和 VM(虚拟机) 是 JerryScript 的两个核心组件。一般来说 JerryScript 运行的基本流程，首先，Parser 将加载到的 JS 标准代码解析成具有特殊格式的字节码，然后由 VM 对字节码进行执行。</p>
 <h2 id="Parser">Parser<a class="post-anchor" href="#Parser"></a></h2><p>在 JerryScript 里，Parser 被设计为 recursive descent parser（递归下降解析器），这样的解析器可以直接将标准 JS 代码转换成字节码而并不像 V8 那样会构建一个 AST。这里的实现依赖以下四个组件：Lexer（词法分析器）、 Scanner、Expression Parser（表达式解析器）以及 Statement Parser（语句解析器）。</p>
