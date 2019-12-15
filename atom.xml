@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://txiaozhe.github.io/"/>
-  <updated>2019-12-12T12:49:51.010Z</updated>
+  <updated>2019-12-15T08:04:51.450Z</updated>
   <id>https://txiaozhe.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>复盘1：直播大数据采集（一期）</title>
+    <link href="https://txiaozhe.github.io/2019/12/15/live-data-fetch/"/>
+    <id>https://txiaozhe.github.io/2019/12/15/live-data-fetch/</id>
+    <published>2019-12-15T08:04:12.000Z</published>
+    <updated>2019-12-15T08:04:51.450Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;这是2017年10月到2018年10月在全民直播期间的一个项目，因为在直播公司的缘故，所以会涉及很多直播相关的业务。当时有几家做的比较好的直播平台，比如斗鱼、虎牙、熊猫、战旗、全民等，直播内容都以游戏、才艺表演为主，直播受众广，每天产生的数据流量巨大，公司为此启动一个新项目
+      
+    
+    </summary>
+    
+    
+      <category term="Tech" scheme="https://txiaozhe.github.io/categories/Tech/"/>
+    
+    
+      <category term="Job" scheme="https://txiaozhe.github.io/tags/Job/"/>
+    
+      <category term="Live" scheme="https://txiaozhe.github.io/tags/Live/"/>
+    
+      <category term="BigData" scheme="https://txiaozhe.github.io/tags/BigData/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScript in IoT</title>
@@ -60,9 +88,9 @@
       <category term="Life" scheme="https://txiaozhe.github.io/categories/Life/"/>
     
     
-      <category term="Job" scheme="https://txiaozhe.github.io/tags/Job/"/>
-    
       <category term="Life" scheme="https://txiaozhe.github.io/tags/Life/"/>
+    
+      <category term="Job" scheme="https://txiaozhe.github.io/tags/Job/"/>
     
   </entry>
   
@@ -71,7 +99,7 @@
     <link href="https://txiaozhe.github.io/2019/11/18/learning-jerryscript-design/"/>
     <id>https://txiaozhe.github.io/2019/11/18/learning-jerryscript-design/</id>
     <published>2019-11-18T14:12:09.000Z</published>
-    <updated>2019-12-12T09:47:35.065Z</updated>
+    <updated>2019-12-13T01:49:05.020Z</updated>
     
     <summary type="html">
     
@@ -141,9 +169,9 @@
       <category term="Life" scheme="https://txiaozhe.github.io/categories/Life/"/>
     
     
-      <category term="Job" scheme="https://txiaozhe.github.io/tags/Job/"/>
-    
       <category term="Life" scheme="https://txiaozhe.github.io/tags/Life/"/>
+    
+      <category term="Job" scheme="https://txiaozhe.github.io/tags/Job/"/>
     
   </entry>
   
@@ -168,9 +196,9 @@
       <category term="Job" scheme="https://txiaozhe.github.io/categories/Job/"/>
     
     
-      <category term="Job" scheme="https://txiaozhe.github.io/tags/Job/"/>
-    
       <category term="Life" scheme="https://txiaozhe.github.io/tags/Life/"/>
+    
+      <category term="Job" scheme="https://txiaozhe.github.io/tags/Job/"/>
     
   </entry>
   
@@ -221,9 +249,9 @@
       <category term="Life" scheme="https://txiaozhe.github.io/categories/Life/"/>
     
     
-      <category term="Job" scheme="https://txiaozhe.github.io/tags/Job/"/>
-    
       <category term="Life" scheme="https://txiaozhe.github.io/tags/Life/"/>
+    
+      <category term="Job" scheme="https://txiaozhe.github.io/tags/Job/"/>
     
   </entry>
   
@@ -274,9 +302,9 @@
       <category term="Life" scheme="https://txiaozhe.github.io/categories/Life/"/>
     
     
-      <category term="Job" scheme="https://txiaozhe.github.io/tags/Job/"/>
-    
       <category term="Life" scheme="https://txiaozhe.github.io/tags/Life/"/>
+    
+      <category term="Job" scheme="https://txiaozhe.github.io/tags/Job/"/>
     
   </entry>
   
@@ -300,11 +328,11 @@
       <category term="Tech" scheme="https://txiaozhe.github.io/categories/Tech/"/>
     
     
+      <category term="Job" scheme="https://txiaozhe.github.io/tags/Job/"/>
+    
       <category term="Mac" scheme="https://txiaozhe.github.io/tags/Mac/"/>
     
       <category term="Tech" scheme="https://txiaozhe.github.io/tags/Tech/"/>
-    
-      <category term="Job" scheme="https://txiaozhe.github.io/tags/Job/"/>
     
   </entry>
   
