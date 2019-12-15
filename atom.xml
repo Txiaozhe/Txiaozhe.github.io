@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://txiaozhe.github.io/"/>
-  <updated>2019-12-15T08:11:54.834Z</updated>
+  <updated>2019-12-15T10:26:05.411Z</updated>
   <id>https://txiaozhe.github.io/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>复盘1：直播大数据采集（一期）</title>
-    <link href="https://txiaozhe.github.io/2019/12/15/live-data-fetch/"/>
-    <id>https://txiaozhe.github.io/2019/12/15/live-data-fetch/</id>
-    <published>2019-12-15T08:04:12.000Z</published>
-    <updated>2019-12-15T08:11:54.834Z</updated>
+    <link href="https://txiaozhe.github.io/2019/12/15/live-data-fetch01/"/>
+    <id>https://txiaozhe.github.io/2019/12/15/live-data-fetch01/</id>
+    <published>2019-12-15T10:25:12.000Z</published>
+    <updated>2019-12-15T10:26:05.411Z</updated>
     
     <summary type="html">
     
@@ -88,9 +88,9 @@
       <category term="Life" scheme="https://txiaozhe.github.io/categories/Life/"/>
     
     
-      <category term="Job" scheme="https://txiaozhe.github.io/tags/Job/"/>
-    
       <category term="Life" scheme="https://txiaozhe.github.io/tags/Life/"/>
+    
+      <category term="Job" scheme="https://txiaozhe.github.io/tags/Job/"/>
     
   </entry>
   
@@ -169,9 +169,9 @@
       <category term="Life" scheme="https://txiaozhe.github.io/categories/Life/"/>
     
     
-      <category term="Job" scheme="https://txiaozhe.github.io/tags/Job/"/>
-    
       <category term="Life" scheme="https://txiaozhe.github.io/tags/Life/"/>
+    
+      <category term="Job" scheme="https://txiaozhe.github.io/tags/Job/"/>
     
   </entry>
   
@@ -196,9 +196,9 @@
       <category term="Job" scheme="https://txiaozhe.github.io/categories/Job/"/>
     
     
-      <category term="Job" scheme="https://txiaozhe.github.io/tags/Job/"/>
-    
       <category term="Life" scheme="https://txiaozhe.github.io/tags/Life/"/>
+    
+      <category term="Job" scheme="https://txiaozhe.github.io/tags/Job/"/>
     
   </entry>
   
@@ -249,9 +249,9 @@
       <category term="Life" scheme="https://txiaozhe.github.io/categories/Life/"/>
     
     
-      <category term="Job" scheme="https://txiaozhe.github.io/tags/Job/"/>
-    
       <category term="Life" scheme="https://txiaozhe.github.io/tags/Life/"/>
+    
+      <category term="Job" scheme="https://txiaozhe.github.io/tags/Job/"/>
     
   </entry>
   
@@ -302,9 +302,9 @@
       <category term="Life" scheme="https://txiaozhe.github.io/categories/Life/"/>
     
     
-      <category term="Job" scheme="https://txiaozhe.github.io/tags/Job/"/>
-    
       <category term="Life" scheme="https://txiaozhe.github.io/tags/Life/"/>
+    
+      <category term="Job" scheme="https://txiaozhe.github.io/tags/Job/"/>
     
   </entry>
   
@@ -328,11 +328,11 @@
       <category term="Tech" scheme="https://txiaozhe.github.io/categories/Tech/"/>
     
     
+      <category term="Job" scheme="https://txiaozhe.github.io/tags/Job/"/>
+    
       <category term="Mac" scheme="https://txiaozhe.github.io/tags/Mac/"/>
     
       <category term="Tech" scheme="https://txiaozhe.github.io/tags/Tech/"/>
-    
-      <category term="Job" scheme="https://txiaozhe.github.io/tags/Job/"/>
     
   </entry>
   
