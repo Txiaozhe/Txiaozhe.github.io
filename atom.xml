@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://txiaozhe.github.io/"/>
-  <updated>2019-12-15T10:26:05.411Z</updated>
+  <updated>2019-12-28T13:54:54.503Z</updated>
   <id>https://txiaozhe.github.io/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>复盘1：直播大数据采集（二期）</title>
+    <link href="https://txiaozhe.github.io/2019/12/26/live-data-fetch02/"/>
+    <id>https://txiaozhe.github.io/2019/12/26/live-data-fetch02/</id>
+    <published>2019-12-26T13:35:14.000Z</published>
+    <updated>2019-12-28T13:54:54.503Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;上一篇文章《直播大数据采集（一期）》（以下简称《一期》）复盘了之前做过的一个采集直播大数据项目，其中介绍了项目相关的细节和技术实现始末，也描述了当时碰到的问题以及采用的解决方案，但由于涉及到太多导致篇幅过长，且当时项目迭代也是分为两期来做的，所以在这里将整个项目分为两篇文章
+      
+    
+    </summary>
+    
+    
+      <category term="Tech" scheme="https://txiaozhe.github.io/categories/Tech/"/>
+    
+    
+      <category term="Job" scheme="https://txiaozhe.github.io/tags/Job/"/>
+    
+      <category term="Live" scheme="https://txiaozhe.github.io/tags/Live/"/>
+    
+      <category term="BigData" scheme="https://txiaozhe.github.io/tags/BigData/"/>
+    
+  </entry>
+  
+  <entry>
     <title>复盘1：直播大数据采集（一期）</title>
     <link href="https://txiaozhe.github.io/2019/12/15/live-data-fetch01/"/>
     <id>https://txiaozhe.github.io/2019/12/15/live-data-fetch01/</id>
     <published>2019-12-15T10:25:12.000Z</published>
-    <updated>2019-12-15T10:26:05.411Z</updated>
+    <updated>2019-12-27T01:26:00.849Z</updated>
     
     <summary type="html">
     
@@ -49,7 +77,7 @@
     <link href="https://txiaozhe.github.io/2019/12/13/javascript-in-iot/"/>
     <id>https://txiaozhe.github.io/2019/12/13/javascript-in-iot/</id>
     <published>2019-12-13T05:23:03.000Z</published>
-    <updated>2019-12-17T02:31:31.469Z</updated>
+    <updated>2019-12-27T01:26:00.847Z</updated>
     
     <summary type="html">
     
@@ -72,7 +100,7 @@
     <link href="https://txiaozhe.github.io/2019/12/05/end-2019/"/>
     <id>https://txiaozhe.github.io/2019/12/05/end-2019/</id>
     <published>2019-12-05T12:57:32.000Z</published>
-    <updated>2019-12-11T13:59:37.748Z</updated>
+    <updated>2019-12-27T01:26:00.846Z</updated>
     
     <summary type="html">
     
@@ -99,7 +127,7 @@
     <link href="https://txiaozhe.github.io/2019/11/18/learning-jerryscript-design/"/>
     <id>https://txiaozhe.github.io/2019/11/18/learning-jerryscript-design/</id>
     <published>2019-11-18T14:12:09.000Z</published>
-    <updated>2019-12-18T14:14:48.310Z</updated>
+    <updated>2019-12-27T01:26:00.848Z</updated>
     
     <summary type="html">
     
@@ -127,7 +155,7 @@
     <link href="https://txiaozhe.github.io/2019/10/18/libuv-design/"/>
     <id>https://txiaozhe.github.io/2019/10/18/libuv-design/</id>
     <published>2019-10-18T15:41:22.000Z</published>
-    <updated>2019-12-12T09:48:39.872Z</updated>
+    <updated>2019-12-27T01:26:00.849Z</updated>
     
     <summary type="html">
     
@@ -154,7 +182,7 @@
     <link href="https://txiaozhe.github.io/2019/06/23/no-more-consider/"/>
     <id>https://txiaozhe.github.io/2019/06/23/no-more-consider/</id>
     <published>2019-06-22T18:05:11.000Z</published>
-    <updated>2019-12-11T13:59:59.847Z</updated>
+    <updated>2019-12-27T01:26:00.851Z</updated>
     
     <summary type="html">
     
@@ -180,7 +208,7 @@
     <link href="https://txiaozhe.github.io/2019/06/20/mqtt-hotfix/"/>
     <id>https://txiaozhe.github.io/2019/06/20/mqtt-hotfix/</id>
     <published>2019-06-20T03:16:23.000Z</published>
-    <updated>2019-12-11T13:59:56.526Z</updated>
+    <updated>2019-12-27T01:26:00.850Z</updated>
     
     <summary type="html">
     
@@ -207,7 +235,7 @@
     <link href="https://txiaozhe.github.io/2019/04/24/add-a-new-sql/"/>
     <id>https://txiaozhe.github.io/2019/04/24/add-a-new-sql/</id>
     <published>2019-04-24T14:07:16.000Z</published>
-    <updated>2019-12-11T13:59:28.683Z</updated>
+    <updated>2019-12-27T01:26:00.845Z</updated>
     
     <summary type="html">
     
@@ -233,7 +261,7 @@
     <link href="https://txiaozhe.github.io/2019/01/28/2019-begin/"/>
     <id>https://txiaozhe.github.io/2019/01/28/2019-begin/</id>
     <published>2019-01-28T09:54:05.000Z</published>
-    <updated>2019-12-11T13:59:20.324Z</updated>
+    <updated>2019-12-27T01:26:00.844Z</updated>
     
     <summary type="html">
     
@@ -260,7 +288,7 @@
     <link href="https://txiaozhe.github.io/2018/12/20/snode-module/"/>
     <id>https://txiaozhe.github.io/2018/12/20/snode-module/</id>
     <published>2018-12-20T12:03:15.000Z</published>
-    <updated>2019-12-11T14:00:09.738Z</updated>
+    <updated>2019-12-27T01:26:00.853Z</updated>
     
     <summary type="html">
     
@@ -287,7 +315,7 @@
     <link href="https://txiaozhe.github.io/2018/12/18/xixi/"/>
     <id>https://txiaozhe.github.io/2018/12/18/xixi/</id>
     <published>2018-12-18T08:49:27.000Z</published>
-    <updated>2019-12-11T14:00:13.943Z</updated>
+    <updated>2019-12-27T01:26:00.854Z</updated>
     
     <summary type="html">
     
@@ -313,7 +341,7 @@
     <link href="https://txiaozhe.github.io/2018/08/22/bash-mac-error/"/>
     <id>https://txiaozhe.github.io/2018/08/22/bash-mac-error/</id>
     <published>2018-08-22T00:54:04.000Z</published>
-    <updated>2019-12-11T13:59:34.711Z</updated>
+    <updated>2019-12-27T01:26:00.846Z</updated>
     
     <summary type="html">
     
@@ -341,7 +369,7 @@
     <link href="https://txiaozhe.github.io/2018/06/10/run-cockroachdb-in-kubernetes/"/>
     <id>https://txiaozhe.github.io/2018/06/10/run-cockroachdb-in-kubernetes/</id>
     <published>2018-06-10T02:59:32.000Z</published>
-    <updated>2019-12-12T09:48:57.457Z</updated>
+    <updated>2019-12-27T01:26:00.852Z</updated>
     
     <summary type="html">
     
@@ -370,7 +398,7 @@
     <link href="https://txiaozhe.github.io/2018/05/24/schema-change/"/>
     <id>https://txiaozhe.github.io/2018/05/24/schema-change/</id>
     <published>2018-05-24T01:15:32.000Z</published>
-    <updated>2019-12-12T09:49:11.046Z</updated>
+    <updated>2019-12-27T01:26:00.852Z</updated>
     
     <summary type="html">
     
@@ -399,7 +427,7 @@
     <link href="https://txiaozhe.github.io/2017/07/27/github-adjective/"/>
     <id>https://txiaozhe.github.io/2017/07/27/github-adjective/</id>
     <published>2017-07-27T12:32:05.000Z</published>
-    <updated>2019-12-11T13:59:41.719Z</updated>
+    <updated>2019-12-27T01:26:00.847Z</updated>
     
     <summary type="html">
     
@@ -426,7 +454,7 @@
     <link href="https://txiaozhe.github.io/2017/07/24/auth/"/>
     <id>https://txiaozhe.github.io/2017/07/24/auth/</id>
     <published>2017-07-24T07:33:20.000Z</published>
-    <updated>2019-12-11T13:59:31.647Z</updated>
+    <updated>2019-12-27T01:26:00.845Z</updated>
     
     <summary type="html">
     
@@ -444,6 +472,32 @@
       <category term="OAuth" scheme="https://txiaozhe.github.io/tags/OAuth/"/>
     
       <category term="JWT" scheme="https://txiaozhe.github.io/tags/JWT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>大学中的五件事</title>
+    <link href="https://txiaozhe.github.io/2014/05/17/%E5%A4%A7%E5%AD%A6%E4%B8%AD%E7%9A%84%E4%BA%94%E4%BB%B6%E4%BA%8B/"/>
+    <id>https://txiaozhe.github.io/2014/05/17/%E5%A4%A7%E5%AD%A6%E4%B8%AD%E7%9A%84%E4%BA%94%E4%BB%B6%E4%BA%8B/</id>
+    <published>2014-05-17T14:36:25.000Z</published>
+    <updated>2019-12-28T14:00:15.412Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;不知道是为什么，最近有很多人来和我抱怨说生活无趣，无所事事，未来渺茫，诸如此类。或许是在这个年龄段的人都会有的心理吧，想想自己也曾经有的心里的变动，便能理解一些。在开导之余，我也在思考其中的意味，简单地总结了几件事来说说。&lt;/p&gt;
+&lt;p&gt;第一件事：关于生活&lt;/p&gt;
+&lt;p&gt;简
+      
+    
+    </summary>
+    
+    
+      <category term="Life" scheme="https://txiaozhe.github.io/categories/Life/"/>
+    
+    
+      <category term="Life" scheme="https://txiaozhe.github.io/tags/Life/"/>
     
   </entry>
   
