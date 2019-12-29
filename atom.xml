@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://txiaozhe.github.io/"/>
-  <updated>2019-12-28T13:54:54.503Z</updated>
+  <updated>2019-12-29T06:37:42.740Z</updated>
   <id>https://txiaozhe.github.io/</id>
   
   <author>
@@ -18,16 +18,16 @@
   
   <entry>
     <title>复盘1：直播大数据采集（二期）</title>
-    <link href="https://txiaozhe.github.io/2019/12/26/live-data-fetch02/"/>
-    <id>https://txiaozhe.github.io/2019/12/26/live-data-fetch02/</id>
-    <published>2019-12-26T13:35:14.000Z</published>
-    <updated>2019-12-28T13:54:54.503Z</updated>
+    <link href="https://txiaozhe.github.io/2019/12/29/live-data-fetch02/"/>
+    <id>https://txiaozhe.github.io/2019/12/29/live-data-fetch02/</id>
+    <published>2019-12-29T06:37:11.000Z</published>
+    <updated>2019-12-29T06:37:42.740Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;上一篇文章《直播大数据采集（一期）》（以下简称《一期》）复盘了之前做过的一个采集直播大数据项目，其中介绍了项目相关的细节和技术实现始末，也描述了当时碰到的问题以及采用的解决方案，但由于涉及到太多导致篇幅过长，且当时项目迭代也是分为两期来做的，所以在这里将整个项目分为两篇文章
+        &lt;p&gt;上一篇文章《直播大数据采集（一期）》（以下简称《一期》）复盘了之前做过的一个采集直播大数据的项目，其中介绍了项目相关的业务和技术实现始末，也描述了当时碰到的问题以及采用的解决方案，但由于涉及到太多细节导致篇幅过长，且当时项目迭代也是分为两期来做的，所以将整个项目分为两篇文章
       
     
     </summary>
@@ -477,10 +477,10 @@
   
   <entry>
     <title>大学中的五件事</title>
-    <link href="https://txiaozhe.github.io/2014/05/17/five-things-for-collage/"/>
-    <id>https://txiaozhe.github.io/2014/05/17/five-things-for-collage/</id>
+    <link href="https://txiaozhe.github.io/2014/05/17/five-things-for-college/"/>
+    <id>https://txiaozhe.github.io/2014/05/17/five-things-for-college/</id>
     <published>2014-05-17T14:36:25.000Z</published>
-    <updated>2019-12-28T14:00:15.412Z</updated>
+    <updated>2019-12-29T04:36:37.465Z</updated>
     
     <summary type="html">
     
