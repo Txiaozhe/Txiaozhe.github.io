@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://txiaozhe.github.io/"/>
-  <updated>2020-02-29T07:22:25.452Z</updated>
+  <updated>2020-02-29T07:29:39.407Z</updated>
   <id>https://txiaozhe.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://txiaozhe.github.io/2020/02/29/IoT-for-edu/"/>
     <id>https://txiaozhe.github.io/2020/02/29/IoT-for-edu/</id>
     <published>2020-02-29T06:38:11.000Z</published>
-    <updated>2020-02-29T07:22:25.452Z</updated>
+    <updated>2020-02-29T07:29:39.407Z</updated>
     
     <summary type="html">
     
@@ -33,12 +33,10 @@
     </summary>
     
     
-      <category term="Job" scheme="https://txiaozhe.github.io/categories/Job/"/>
-    
-      <category term="Tech" scheme="https://txiaozhe.github.io/categories/Job/Tech/"/>
+      <category term="Tech" scheme="https://txiaozhe.github.io/categories/Tech/"/>
     
     
-      <category term="iot" scheme="https://txiaozhe.github.io/tags/iot/"/>
+      <category term="IoT" scheme="https://txiaozhe.github.io/tags/IoT/"/>
     
   </entry>
   
@@ -115,11 +113,11 @@
       <category term="Tech" scheme="https://txiaozhe.github.io/categories/Tech/"/>
     
     
+      <category term="IoT" scheme="https://txiaozhe.github.io/tags/IoT/"/>
+    
       <category term="JavaScript" scheme="https://txiaozhe.github.io/tags/JavaScript/"/>
     
       <category term="JerryScript" scheme="https://txiaozhe.github.io/tags/JerryScript/"/>
-    
-      <category term="IoT" scheme="https://txiaozhe.github.io/tags/IoT/"/>
     
   </entry>
   
