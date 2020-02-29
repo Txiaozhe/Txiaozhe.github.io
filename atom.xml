@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://txiaozhe.github.io/"/>
-  <updated>2019-12-29T06:37:42.740Z</updated>
+  <updated>2020-02-29T07:22:25.452Z</updated>
   <id>https://txiaozhe.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>复盘2：IoT + 教育培训业务架构设计</title>
+    <link href="https://txiaozhe.github.io/2020/02/29/IoT-for-edu/"/>
+    <id>https://txiaozhe.github.io/2020/02/29/IoT-for-edu/</id>
+    <published>2020-02-29T06:38:11.000Z</published>
+    <updated>2020-02-29T07:22:25.452Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;2019 年 9月底，由于公司业务原因从 Rokid 离职，十月份则到处跑找工作，因此也接触到一些公司和创始人，期间碰到一家做 IoT + 编程教育的初创公司，对于他们的业务目标目前他们没有足够的相关经验来搭建，并且他们也比较认可我所描述的一套 IoT 业务流程，聊过之后发
+      
+    
+    </summary>
+    
+    
+      <category term="Job" scheme="https://txiaozhe.github.io/categories/Job/"/>
+    
+      <category term="Tech" scheme="https://txiaozhe.github.io/categories/Job/Tech/"/>
+    
+    
+      <category term="iot" scheme="https://txiaozhe.github.io/tags/iot/"/>
+    
+  </entry>
   
   <entry>
     <title>复盘1：直播大数据采集（二期）</title>
@@ -76,6 +102,31 @@
     <title>JavaScript in IoT</title>
     <link href="https://txiaozhe.github.io/2019/12/13/javascript-in-iot/"/>
     <id>https://txiaozhe.github.io/2019/12/13/javascript-in-iot/</id>
+    <published>2019-12-13T05:23:03.000Z</published>
+    <updated>2020-02-29T06:38:14.173Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- &gt; 壹向技术分享：在低端设备上运行 JavaScript --&gt;
+    
+    </summary>
+    
+    
+      <category term="Tech" scheme="https://txiaozhe.github.io/categories/Tech/"/>
+    
+    
+      <category term="JavaScript" scheme="https://txiaozhe.github.io/tags/JavaScript/"/>
+    
+      <category term="JerryScript" scheme="https://txiaozhe.github.io/tags/JerryScript/"/>
+    
+      <category term="IoT" scheme="https://txiaozhe.github.io/tags/IoT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript in IoT</title>
+    <link href="https://txiaozhe.github.io/2019/12/13/javascript%20in%20iot/javascript-in-iot/"/>
+    <id>https://txiaozhe.github.io/2019/12/13/javascript%20in%20iot/javascript-in-iot/</id>
     <published>2019-12-13T05:23:03.000Z</published>
     <updated>2019-12-27T01:26:00.847Z</updated>
     
