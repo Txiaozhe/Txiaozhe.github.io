@@ -219,7 +219,8 @@
 <p><a href="/images/ml-pipcook3.png" data-caption data-fancybox="images"><img src="/images/ml-pipcook3.png" alt></a></p>
 <p>事实上，要训练出一个具有实际意义的机器学习模型仅有这么点样本是远远不够的。接下来把整个数据集分成两部分，一部分用来流过这个黑盒子来得到更加精确的黑盒子，训练的时候将图片信息输入 f(x)，但这个时候也会告诉 f(x) 此时应该得到数字 “0”，并在 f(x) 确实输出 “0” 的时候给予一定的激励，此时在算法的作用下，f(x) 就会发现如此判断一个手写数字貌似是可行的，于是加重这种模式的比重。最后使用剩下的数据来验证一下这个模型 f(x) 的精确度。</p>
 <p>当然，实际上机器学习算法的复杂度要远远高于上述所说，推荐阅读 Tensorflow 中文社区的几篇文章：</p>
-<p><a href="http://www.tensorfly.cn/special/deeplearning/chap1.html，这几篇文章描述了机器学习的大概思路与实现机制，还算是通俗易懂，只要你在大学学过高数读起来应该就没什么障碍。" target="_blank" rel="noopener">http://www.tensorfly.cn/special/deeplearning/chap1.html，这几篇文章描述了机器学习的大概思路与实现机制，还算是通俗易懂，只要你在大学学过高数读起来应该就没什么障碍。</a></p>
+<p><a href="http://www.tensorfly.cn/special/deeplearning/chap1.html" target="_blank" rel="noopener">http://www.tensorfly.cn/special/deeplearning/chap1.html</a></p>
+<p>这几篇文章描述了机器学习的大概思路与实现机制，还算是通俗易懂，只要你在大学学过高数读起来应该就没什么障碍。</p>
 <p>机器学习，看上去还是高大上的，那作为开发者，我们可以用机器学习来做什么呢？</p>
 <p>Pipcook 就是这样一个项目，它将机器学习的数据集、训练、模型评估等过程都进行了封装，换句话说 Pipcook 就是将机器学习的细节做成了一个黑盒子，让开发者可以在不了解机器学习机制的情况下使用机器学习助长生产力。</p>
 <p>那 Pipcook 又是怎样运作的呢？</p>
